@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 99%;
+    height: 100%;
+    background-color: #F2F2F2;
+    font-family: Calibri;
+}
+
+#page {
+    position: relative;
+    width: 100%;
+}
+
+#header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 150px;
+    background-color: ;
+    
+}
+
+#navBar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 40px;
+    background-color: #2E2E2B;
+    border: 10px solid #2E2E2B;
+}
+
+#mainContent {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    border-left: 10px solid #275B5C;
+    border-right: 10px solid #275B5C;
+    border-top: 10px solid #275B5C;
+}
+
+#lowerMiddle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 200px;
+    border: 10px solid #275B5C;
+}
+
+#secondaryContent {
+    margin-left: 0;
+    margin-right: auto;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#tertiaryContent {
+    position: relative;
+    left: 400px;
+    top: -100%;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#bottomBar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 40px;
+    background-color: #2E2E2B;
+    border: 10px solid #2E2E2B;
+    text-align: center;
+    color: #3EACAD;
+    font-size: 11pt;
+}
+
+.content {
+    background-color: white;
+}
+
+#header h1 {
+    color: #3EACAD;
+    font-size: 72pt;
+    font-family: Calibri;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+#header h2 {
+    color: #275B5C;
+    font-size: 20pt;
+    font-family: Courier New;
+    position: relative;
+    top: -55%;
+    left: 70%;
+}
+
+#navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navBar li {
+    display: inline;
+    font-size: 18pt;
+    padding-left: 30px;
+}
+
+#navBar a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navBar a:link {
+    color: #FFFFFF;
+}
+
+#navBar a:hover {
+    color: #16B7BA;
+}
+
+#navBar a:visited {
+    color: #FFFFFF;
+}
+
+#navBar a:active {
+    color: #16B7BA;
+}
+
+/* Colors:
+
+#3EACAD
+#16B7BA
+#275B5C
+
+Potential extras:
+#9C5856
+
+*/
