@@ -7,6 +7,6 @@ loadSnippets();
 function loadSnippets()
 {
     $(".snippet").each(function() {
-        $(this).load("../snippets/" + $(this).attr('id') + ".html");
+        $(this).load("snippets/" + $(this).attr('id') + ".html");
     });
 }
