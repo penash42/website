@@ -131,6 +131,18 @@ main {
     width: 500px;
     height: 500px;
     background-color: rgba(11, 13, 15, .97);
+    outline: 0px solid #16B7BA;
+    text-align: justify;
+}
+
+#contactInfo {
+    text-align: center;
+}
+
+#contactInfoHeader {
+    color: #16B7BA;
+    text-align: right;
+    letter-spacing: 10px;
 }
 
 #updates a:link {
