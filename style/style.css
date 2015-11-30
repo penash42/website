@@ -18,14 +18,12 @@ header {
     margin-left: auto;
     margin-right: auto;
     width: 101%;
-    height: 150px;
-    border-bottom: 0px solid #275B5C;
+    height: 450px;
+    border-bottom: 10px solid #275B5C;
+    background-image: url("bw.jpg");
+    background-position: 50% 50%;
+    background-size: cover; 
 }
-
-header.landing {
-    border: none;
-}
-
 
 header h1 {
     color: #3EACAD;
@@ -66,10 +64,8 @@ header.landing h2 {
     width: 800px;
     height: 40px;
     position: absolute;
-    top: 80px;
-    left: 900px;
-    background-color: #0E1013;
-    border: none;
+    top: 415px;
+    left: 80px;
 }
 
 
@@ -81,11 +77,14 @@ header.landing h2 {
 
 #navBar li {
     display: inline;
-    font-size: 18pt;
+    font-size: 14pt;
     width: 120px;
-    background-color: #16191E;
-    padding: 10px;
-    border: 5px solid #16191E;
+    padding: 5px;
+    border-right: 1px solid white;
+}
+
+#navBar li.last {
+    border: none;
 }
 
 #navBar a {
