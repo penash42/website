@@ -2,7 +2,7 @@
 
 }
 
-.timeline-content {
+.timeline-content, .timeline-base {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -10,4 +10,18 @@
 
 .timeline-entry {
     /*display: inline;*/
+}
+
+.timeline-base li {
+    display: inline;
+    font-size: 8pt;
+}
+
+.timeline-baseinner {
+
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    padding: 10px;
+    
 }

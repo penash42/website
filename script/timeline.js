@@ -19,15 +19,18 @@ $( document ).ready(function() {
     }
     
     var baseInnerHtml = "";
-    vars months[12] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    for (var year = delta[0]; i <= delta[1]; i++)
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    for (var year = delta[0]; year <= delta[1]; year++)
     {
-        baseInnerHtml += "<ul id='" + id + "_" + year + "'>" +  + "</>";
-        for (var month = 1; month <= 12; month++)
+        baseInnerHtml += "<li id='" + year + "'>" + year + "\r\n";
+        for (var month = 0; month < 12; month++)
         {
-            
+            baseInnerHtml += "<div class='timeline-baseinner' id='" + year + "_" + months[month] + "'>" + months[month] + "</div>\r\n"
         }
+        baseInnerHtml += "</li>\r\n";
     }
+    
+    $(".timeline-base").html(baseInnerHtml);
 });
 
 // pop ups
