@@ -119,20 +119,49 @@ header.landing h2 {
     width: auto;
 }
 
+.content {
+    color: black;
+    background-color: rgba(255, 255, 255, .95);
+    outline: 2px solid rgba(255, 255, 255, .95);
+}
+
 #mainContent {
     position: fixed;
     left: 35%;
     top: 25%;
     width: 500px;
     height: 510px;
-    color: black;
-    background-color: rgba(255, 255, 255, .95);
-    outline: 2px solid rgba(255, 255, 255, .95);
 }
 
 #about {
     text-align: justify;
     line-height:170%;
+}
+
+#resumeDiv {
+    position: fixed;
+    left: 25%;
+    top: 15%;
+    width: 1000px;
+    height: 710px;
+    font-size: 11pt;
+}
+
+#resumeDiv #basicInfoAndEdu {
+    height: 15%;
+}
+
+#resumeDiv #basicInfo, #resumeDiv #education{
+    width: 50%;
+    float: left;
+}
+
+#resumeDiv #skills {
+    height: 35%;
+}
+
+#resumeDiv #experience {
+    height: 50%;
 }
 
 em {
