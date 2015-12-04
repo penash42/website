@@ -6,6 +6,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: inherit;
 }
 
 .timeline-entry {
@@ -13,15 +14,17 @@
 }
 
 .timeline-base li {
-    display: inline;
     font-size: 8pt;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid black;
 }
 
-.timeline-baseinner {
+.timeline-base li.timeline-base-year-last {
+    border-right: 0;
+}
 
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
-    padding: 10px;
-    
+.timeline-canvas {
+    width: 100%;
+    height: 80%;
 }
