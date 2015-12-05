@@ -22,7 +22,6 @@
                         <br />
                         Paige Nash
                         <br />
-                        
                     </div>
                     <div id="education">
                         <em>Education</em>
@@ -49,8 +48,20 @@
                     <div class="timeline">
                         <ul class="timeline-content" style="display: none;">
                             <li class="timeline-entry" id="5/2009">Graduated High school</li>
-                            <li class="timeline-entry" id="9/2009;5/2014">Attended Tennessee Tech</li>
-                            <li class="timeline-entry" id="2/2011;5/2014">TN Tech - Tech Support</li>
+                            <li class="timeline-entry" id="9/2009;5/2014">
+                                <div class="tooltipClass">
+                                    <em>Attended Tennessee Tech</em>
+                                    9/2009-5/2014
+                                    B.S. in Computer Science
+                                    B.S. in Mathematics
+                                    GPA: 3.48
+                                </div>
+                            </li>
+                            <li class="timeline-entry" id="2/2011;5/2014">
+                                <div class="tooltipClass">
+                                    TN Tech - Tech Support
+                                </div>
+                            </li>
                             <li class="timeline-entry" id="5/2011;8/2011">ADTRAN - Co-operative Education Student</li>
                             <li class="timeline-entry" id="5/2012;8/2012">ADTRAN - Co-operative Education Student</li>
                             <li class="timeline-entry" id="8/2012;12/2012">ADTRAN - Co-operative Education Student</li>
@@ -75,14 +86,16 @@
                 <a href="http://www.linkedin.com/in/nashpaige" target="_blank"><img id="linkedIn" src="style/In-2CRev-66px-R.png"></a>
                 <a href ="https://github.com/penash42" target="_blank"><img id="gitHub" src="style/GitHub-Mark-Light-64px.png"></a>
             </div> <!-- externalLogolinks div -->
-            <footer class="landing">
+            <footer class="landing" style="display: none;">
                 (c) Paige Nash
                 <br />
                 August 13th, 2014
             </footer>
         </div> <!-- page div -->
-        
-        <script src="script/jquery-2.1.1.min.js"></script>
+        <div id="myHoverContents">WHATEVER</DIV>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <script src="script/raphael-min.js"></script>
         <script src="script/timeline.js"></script>
     </body>
