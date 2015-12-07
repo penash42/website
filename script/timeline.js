@@ -86,18 +86,16 @@ $( document ).ready(function() {
             
             var rectangle = canvas.rect(startLoc, bottom, endLoc, rectHeight).attr({
                 fill: COLORS[rectangles.length],
-                opacity: OPACITY,
+                opacity: OPACITY
             });
             
-            var childDiv = $(this).children();
-            /*rectangle.mouseover(function () {
-                $(childDiv).css("display", "block");
+            rectangle.mouseover(function () {
                 rectangle.stop().animate({transform: "t0, -35", height: rectHeight + 45}, 1, "bounce");
             }).mouseout(function () {
                 rectangle.stop().animate({transform: "", height: rectHeight + 1}, 300, "bounce");
-            });*/
+            });
             
-            rectangle.mouseover(function () {
+            /*rectangle.mouseover(function () {
                 $("#myHoverContents").css('display','block'); //show the div
                 this.attr({
                     cursor: 'pointer'
@@ -115,7 +113,7 @@ $( document ).ready(function() {
                 }, 200);
                 this.attr({
                 });
-            });
+            });*/
             
             /*var attr = { fill: '#898989', stroke: '#FFFFFF', 'stroke-width': 2, 'stroke-linejoin': 'round' }
             var label = canvas.popup(50, 50, "").hide();
