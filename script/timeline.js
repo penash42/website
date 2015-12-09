@@ -1,5 +1,5 @@
 const COLORS  = ["#00ff31", "#0ff", "#69039f", "#ff246f", "#f00", "#f8ff00", "#ff7300"];
-const OPACITY = .9;
+const OPACITY = .8;
 
 $( document ).ready(function() {
     var id = $(".timeline-base").attr("id");
@@ -52,7 +52,7 @@ $( document ).ready(function() {
     var rectangles = [];
     
     var bottom = $(".timeline-canvas").height();
-    var height = 75;
+    var height = 100;
     
     $(".timeline-entry").each(function() {
         id = $(this).attr("id");
@@ -79,7 +79,7 @@ $( document ).ready(function() {
             var rectHeight = height;
             while (willCauseCollision(rectangles, startLoc, startLoc + endLoc, rectHeight))
             {
-                rectHeight += 25;
+                rectHeight -= 15;
             }
             
             bottom = bottom - rectHeight + 1;
@@ -154,12 +154,10 @@ function willCauseCollision(rectangles, begin, end, height)
         } else if (begin <= rectangles[rec].start && end > rectangles[rec].start
             && height == rectangles[rec].height)
         {
-        
             return true;
-        } else if (begin >= rectangles[rec].start && end <= rectangles[rec].end
+        } else if (begin == rectangles[rec].start || end == rectangles[rec].end
             && height == rectangles[rec].height)
         {
-        
             return true;
         }
     }
