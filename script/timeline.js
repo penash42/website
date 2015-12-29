@@ -1,5 +1,5 @@
 const COLORS  = ["#00ff31", "#0ff", "#69039f", "#ff246f", "#f00", "#f8ff00", "#ff7300"];
-const OPACITY = .8;
+const OPACITY = 1;
 
 $( document ).ready(function() {
     var id = $(".timeline-base").attr("id");
@@ -62,31 +62,29 @@ $( document ).ready(function() {
         {
             // determine start month and year
             var start = delta[0].split("/");
-            var startLoc = start[0]*monthSplit + (start[1] - firstYear)*perWidth;
+            var startLoc = Math.floor(start[0]*monthSplit + (start[1] - firstYear)*perWidth);
             
             var end, endLoc;
             // determine end month and year
             if (delta[1] == "present")
             {
-                endLoc = $(".timeline-canvas").width();
+                endLoc = Math.floor($(".timeline-canvas").width());
             } else
             {
                 end = delta[1].split("/");
-                endLoc = (end[1] - firstYear)*perWidth - startLoc + end[0]*monthSplit;
+                endLoc = Math.floor((end[1] - firstYear)*perWidth - startLoc + end[0]*monthSplit);
             }
             
             // draw
-            var rectHeight = height;
-            while (willCauseCollision(rectangles, startLoc, startLoc + endLoc, rectHeight))
-            {
-                rectHeight -= 15;
-            }
+            var rectHeight = determineHeight(rectangles, startLoc, startLoc + endLoc, height);
             
             bottom = bottom - rectHeight + 1;
             
             var rectangle = canvas.rect(startLoc, bottom, endLoc, rectHeight).attr({
-                fill: COLORS[rectangles.length],
-                opacity: OPACITY
+                'fill': COLORS[rectangles.length],
+                'fill-opacity': OPACITY,
+                'stroke-width': 1,
+                'stroke-opacity': 1
             });
             
             rectangle.mouseover(function () {
@@ -95,41 +93,10 @@ $( document ).ready(function() {
                 rectangle.stop().animate({transform: "", height: rectHeight + 1}, 300, "bounce");
             });
             
-            /*rectangle.mouseover(function () {
-                $("#myHoverContents").css('display','block'); //show the div
-                this.attr({
-                    cursor: 'pointer'
-                });
-                this.animate({
-                    scale: '1.5',
-                    height: '110%',
-                    easing: 'linear'
-                }, 200);
-            });
-            rectangle.mouseout(function () {
-                $("#myHoverContents").css('display','none'); //hide the div
-                this.animate({
-                    scale: '1.05'
-                }, 200);
-                this.attr({
-                });
-            });*/
+            rectangle.node.setAttribute("aria-describedby", $(this).attr("aria-describedby"));
             
-            /*var attr = { fill: '#898989', stroke: '#FFFFFF', 'stroke-width': 2, 'stroke-linejoin': 'round' }
-            var label = canvas.popup(50, 50, "").hide();
-            var labelText = $(this).html();
-            rectangle.hover(function(){
-                var bbox = this.getBBox();
-                label.attr({text: labelText}).update(bbox.x, bbox.y + bbox.height/2, bbox.width).toFront().show();
-                }, function(){ 
-                label.hide();
-            });*/
-            
-            var childDiv = $(this).children();
-            rectangle.hover(function() {
+            $('[aria-describedby]').qtip({
                 
-            }, function() {
-               // $(childDiv).hide();
             });
             
             rectangles.push({
@@ -143,23 +110,21 @@ $( document ).ready(function() {
     
 });
 
-function willCauseCollision(rectangles, begin, end, height)
+function determineHeight(rectangles, begin, end, height)
 {
     for (rec in rectangles)
     {
-        if (begin >= rectangles[rec].start && begin < rectangles[rec].end
-            && height == rectangles[rec].height ) 
+        // end == rec.end or begin == rec.begin, reduce height
+        if (((end == rectangles[rec].end) || (begin == rectangles[rec].start)) && (height == rectangles[rec].height))
         {
-            return true;
-        } else if (begin <= rectangles[rec].start && end > rectangles[rec].start
-            && height == rectangles[rec].height)
+            height -= 15;
+        }
+        
+        // fully contained within, match height
+        if ((end < rectangles[rec].end) && (begin > rectangles[rec].start))
         {
-            return true;
-        } else if (begin == rectangles[rec].start || end == rectangles[rec].end
-            && height == rectangles[rec].height)
-        {
-            return true;
+            height = rectangles[rec].height;
         }
     }
-    return false;
+    return height;
 }

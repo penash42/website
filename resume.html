@@ -1,7 +1,8 @@
 <html>
     <head>
-        <title>adora festiva  |  yeah i know</title>
+        <title>Paige Nash  |  Software Engineer</title>
         <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="script/jquery.qtip.min.css">
         <link rel="stylesheet" href="style/timeline.css">
     </head>
     <body>
@@ -23,7 +24,7 @@
                         Paige Nash
                         <br />
                     </div>
-                    <div id="education">
+                    <div id="education" aria-described="tnTech">
                         <em>Education</em>
                         <br />
                         Tennessee Technological University - Graduated May 2014
@@ -35,6 +36,7 @@
                         GPA: 3.48
 
                     </div>
+                    <div id="tnTech">This is a thing</div>
                 </div>
                 <hr>
                 <div id="skills">
@@ -48,38 +50,33 @@
                     <div class="timeline">
                         <ul class="timeline-content" style="display: none;">
                             <li class="timeline-entry" id="5/2009">Graduated High school</li>
-                            <li class="timeline-entry" id="9/2009;5/2014">
-                                <div class="tooltipClass">
-                                    <em>Attended Tennessee Tech</em>
-                                    9/2009-5/2014
-                                    B.S. in Computer Science
-                                    B.S. in Mathematics
-                                    GPA: 3.48
-                                </div>
-                            </li>
-                            <li class="timeline-entry" id="2/2011;5/2014">
-                                <div class="tooltipClass">
-                                    TN Tech - Tech Support
-                                </div>
-                            </li>
-                            <li class="timeline-entry" id="5/2011;8/2011">ADTRAN - Co-operative Education Student</li>
-                            <li class="timeline-entry" id="5/2012;8/2012">ADTRAN - Co-operative Education Student</li>
-                            <li class="timeline-entry" id="8/2012;12/2012">ADTRAN - Co-operative Education Student</li>
-                            <li class="timeline-entry" id="5/2013;8/2013">ADTRAN - Co-operative Education Student</li>
-                            <li class="timeline-entry" id="5/2014;present">ADTRAN - Software Engineer</li>
+                            <li class="timeline-entry" id="9/2009;5/2014" aria-describedby="ttnTech"></li>
+                            <li class="timeline-entry" id="2/2011;5/2014" aria-describedby="ttu_techSupport">TN Tech - Tech Support</li>
+                            <li class="timeline-entry" id="5/2011;8/2011" aria-describedby="coop_summer2011">ADTRAN - Co-operative Education Student</li>
+                            <li class="timeline-entry" id="5/2012;8/2012" aria-describedby="coop_summer2012">ADTRAN - Co-operative Education Student</li>
+                            <li class="timeline-entry" id="8/2012;12/2012" aria-describedby="coop_fall2012">ADTRAN - Co-operative Education Student</li>
+                            <li class="timeline-entry" id="5/2013;8/2013" aria-describedby="coop_summer2013">ADTRAN - Co-operative Education Student</li>
+                            <li class="timeline-entry" id="5/2014;present" aria-describedby="adtran_fullTime">ADTRAN - Software Engineer</li>
                         </ul>
                         <ul class="timeline-base" id="2009;present">
                         </ul>
                     </div>
                     
                     <!-- popups -->
-                    <div id="ttu_techSupport"></div>
-                    <div id="coop_summer2011"></div>
-                    <div id="coop_summer2012"></div>
-                    <div id="coop_fall2012"></div>
-                    <div id="coop_summer2013"></div>
-                    <div id="adtran_fullTime"></div>
-                    <div id="softwareEngineering"></div>
+                    <div id="ttnTech" class="tooltipClass">
+                        <em>Attended Tennessee Tech</em>
+                        9/2009-5/2014
+                        B.S. in Computer Science
+                        B.S. in Mathematics
+                        GPA: 3.48
+                    </div>
+                    <div id="ttu_techSupport" class="tooltipClass"></div>
+                    <div id="coop_summer2011" class="tooltipClass"></div>
+                    <div id="coop_summer2012" class="tooltipClass"></div>
+                    <div id="coop_fall2012" class="tooltipClass"></div>
+                    <div id="coop_summer2013" class="tooltipClass"></div>
+                    <div id="adtran_fullTime" class="tooltipClass"></div>
+                    <div id="softwareEngineering" class="tooltipClass"></div>
                 </div>
             </div> <!-- mainContent div -->
             <div id="externalLogoLinks">
@@ -93,8 +90,7 @@
             </footer>
         </div> <!-- page div -->
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        <script src="script/jquery.qtip.min.js"></script>
         <script src="script/raphael-min.js"></script>
         <script src="script/timeline.js"></script>
     </body>

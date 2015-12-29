@@ -7,8 +7,8 @@ body {
     color: white;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     background-image: url("bw.jpg");
-    background-position: 0% 0%;
-    background-size: cover; 
+    /*background-position: 0% 0%;*/
+    background-size: 115%; 
 }
 
 #page {
@@ -166,7 +166,8 @@ header.landing h2 {
 
 em {
     font-style: normal;
-    color: #16B7BA;
+    font-weight: bold;
+    color: #0d7072;
 }
 
 #contactInfo {
@@ -226,6 +227,13 @@ footer {
 
 footer {
     display: none;
+}
+
+#construction
+{
+    font-size: 58pt;
+    color: #16B7BA;
+    word-wrap: break-word;
 }
 
 
