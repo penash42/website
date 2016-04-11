@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 99%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+/* Right side of the page */
+main {
+    width: 50%;
+    float: right;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #DA4453;
+    color: #FFFFFF;
+}
+
+/* Left side of the page */
+header {
+    width: 50%;
+    float: left;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: url('transition.png') no-repeat fixed 28%;
+}
+
+footer {
+    display: none;
+}
+
+#name {
+    font-size: 30pt;
+}
+
+#photo {
+    border: #ABD542 solid 8px;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 15px;
+    top: 100px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link {
+    color: #ABD542;
+}
+
+a:hover {
+    color: #DAF696;
+}
+
+a:visited:hover {
+    color: #DAF696;
+}
+
+a:visited {
+    color: #ABD542;
+}
+
+a:active {
+    color: #DAF696;
+}
+
+/* Colors
+84DF7D green
+157E70 blue
+DA4453 dark salmon, background
+E7693C orange
+F1543F darker orange
+F13FAA 
+*/

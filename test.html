@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Raphael Play</title>
+        <script type="text/javascript" src="script/raphael-min.js"></script>
+        <style type="text/css">
+            #canvas_container {
+                width: 500px;
+                border: 1px solid #aaa;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function() {
+    var paper = new Raphael(document.getElementById('canvas_container'), 500, 500);
+    var tetronimo = paper.rect(100, 100, 300, 100);
+}
+        </script>
+    </head>
+    <body>
+        <div id="canvas_container"></div>
+    </body>
+</html>
