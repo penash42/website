@@ -3,6 +3,8 @@ body {
     padding: 0;
     width: 99%;
     height: 100%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 11pt;
     background-color: #FFFFFF;
 }
 
@@ -43,7 +45,7 @@ footer {
     width: 150px;
     position: absolute;
     right: 15px;
-    top: 100px;
+    top: 50px;
 }
 
 #info {
@@ -74,6 +76,62 @@ a:visited {
 a:active {
     color: #DAF696;
 }
+
+/* Content */
+
+.sectionTitle {
+    color: #77C4B9;
+    font-size: 14pt;
+    font-weight: 900;
+}
+
+b {
+    color: #FFC59B;
+}
+
+#skills {
+    width: 100%;
+}
+
+#skillList-left {
+    width: 50%;
+    float: left;
+}
+
+#skillList-right {
+    width: 50%;
+    float: left;
+}
+
+#skillList-left ul, #skillList-right ul{
+    list-style: none;
+}
+
+.skillsName  {
+    display: block;
+    width: 150px;
+    font-size: 14pt;
+}
+
+.skillsTime {
+    display: block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    position: relative;
+    top: -33px;
+    left: 150px;
+
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    background-color: white;
+    color: #84DF7D;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
 
 /* Colors
 84DF7D green
